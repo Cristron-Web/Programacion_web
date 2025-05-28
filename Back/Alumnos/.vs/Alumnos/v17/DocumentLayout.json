@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Cristian\\Desktop\\Alumnos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|c:\\users\\cristian\\desktop\\alumnos\\api\\entidades\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|solutionrelative:api\\entidades\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|c:\\users\\cristian\\desktop\\alumnos\\api\\persistencia\\configuraciones\\mensajesconfiguracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|solutionrelative:api\\persistencia\\configuraciones\\mensajesconfiguracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\Cristian\\Desktop\\Alumnos\\Api\\Entidades\\Producto.cs",
+              "RelativeDocumentMoniker": "Api\\Entidades\\Producto.cs",
+              "ToolTip": "C:\\Users\\Cristian\\Desktop\\Alumnos\\Api\\Entidades\\Producto.cs",
+              "RelativeToolTip": "Api\\Entidades\\Producto.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAAA0AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T14:56:55.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MensajesConfiguracion.cs",
+              "DocumentMoniker": "C:\\Users\\Cristian\\Desktop\\Alumnos\\Api\\Persistencia\\Configuraciones\\MensajesConfiguracion.cs",
+              "RelativeDocumentMoniker": "Api\\Persistencia\\Configuraciones\\MensajesConfiguracion.cs",
+              "ToolTip": "C:\\Users\\Cristian\\Desktop\\Alumnos\\Api\\Persistencia\\Configuraciones\\MensajesConfiguracion.cs",
+              "RelativeToolTip": "Api\\Persistencia\\Configuraciones\\MensajesConfiguracion.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T14:49:19.752Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

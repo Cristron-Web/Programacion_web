@@ -1,4 +1,6 @@
-﻿namespace Api.Entidades
+﻿using Api.Comun.Interfaces;
+
+namespace Api.Entidades
 {
     public class Categoria
     {

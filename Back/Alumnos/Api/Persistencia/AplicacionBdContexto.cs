@@ -9,16 +9,14 @@ namespace Api.Persistencia;
 public class AplicacionBdContexto : DbContext, IAplicacionBdContexto
 {
     private IDbContextTransaction _actualTransaccion;
-    public AplicacionBdContexto(DbContextOptions opciones) : base(opciones)
-    {
-    }
+    
     public DbSet<Usuario> Usuarios { get; set; }
     public DbSet<SesionUsuario> SesionesUsuario { get; set; }
     public DbSet<Producto> Productos { get; set; }
     public DbSet<Categoria> Categorias { get; set; }
     public DbSet<Mensajes> Mensajes { get; set; }
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    public void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
 

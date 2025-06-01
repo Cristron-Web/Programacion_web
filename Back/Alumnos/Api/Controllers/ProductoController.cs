@@ -8,7 +8,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Api.Controllers
 {
-    [Route("productos")]
+    [ApiController]
+    [Route("/productos")]
     public class ProductosController : ControllerBase
     {
         private readonly IAplicacionBdContexto _contexto;
@@ -52,7 +53,7 @@ namespace Api.Controllers
         }
 
         // POST /productos
-        [HttpPost]
+        [HttpPost("{slug}")]
         public async Task<ActionResult<string>> CrearProducto([FromBody] CrearProductoDto dto, CancellationToken cancelToken)
         {
             var vendedor = await _contexto.Usuarios.FirstOrDefaultAsync(x => x.Slug == dto.VendedorSlug, cancelToken);

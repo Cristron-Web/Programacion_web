@@ -20,6 +20,7 @@ public interface IAplicacionBdContexto
     Task EmpezarTransaccionAsync();
     Task MandarTransaccionAsync();
     void CancelarTransaccion();
+    void OnModelCreating(ModelBuilder modelBuilder);
 }
 
 public class AplicacionBdContexto : DbContext, IAplicacionBdContexto
@@ -32,7 +33,7 @@ public class AplicacionBdContexto : DbContext, IAplicacionBdContexto
     public DbSet<Producto> Productos { get; set; }
     public DbSet<Categoria> Categorias { get; set; }
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    public void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
 

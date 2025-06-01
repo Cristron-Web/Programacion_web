@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Cristian\\proyecto-pw\\Back\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Persistencia\\AplicacionBdContexto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Alumnos\\Api\\Persistencia\\AplicacionBdContexto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Entidades\\Usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Alumnos\\Api\\Entidades\\Usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Entidades\\Mensajes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Alumnos\\Api\\Entidades\\Mensajes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Comun\\Utilidades\\MapeoDtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,19 +27,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AplicacionBdContexto.cs",
-              "DocumentMoniker": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Persistencia\\AplicacionBdContexto.cs",
-              "RelativeDocumentMoniker": "Alumnos\\Api\\Persistencia\\AplicacionBdContexto.cs",
-              "ToolTip": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Persistencia\\AplicacionBdContexto.cs",
-              "RelativeToolTip": "Alumnos\\Api\\Persistencia\\AplicacionBdContexto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAxAAAA",
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Entidades\\Usuario.cs",
+              "RelativeDocumentMoniker": "Alumnos\\Api\\Entidades\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Entidades\\Usuario.cs",
+              "RelativeToolTip": "Alumnos\\Api\\Entidades\\Usuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T04:58:33.078Z",
+              "WhenOpened": "2025-06-01T02:51:20.562Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Mensajes.cs",
+              "DocumentMoniker": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Entidades\\Mensajes.cs",
+              "RelativeDocumentMoniker": "Alumnos\\Api\\Entidades\\Mensajes.cs",
+              "ToolTip": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Entidades\\Mensajes.cs",
+              "RelativeToolTip": "Alumnos\\Api\\Entidades\\Mensajes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T02:51:17.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MapeoDtos.cs",
               "DocumentMoniker": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Comun\\Utilidades\\MapeoDtos.cs",
               "RelativeDocumentMoniker": "Alumnos\\Api\\Comun\\Utilidades\\MapeoDtos.cs",

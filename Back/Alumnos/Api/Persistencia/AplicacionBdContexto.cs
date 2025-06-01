@@ -24,14 +24,16 @@ public class AplicacionBdContexto : DbContext, IAplicacionBdContexto
 
         // Configurar relaciones entre Producto y Categoría (Muchos a Muchos)
         modelBuilder.Entity<Producto>()
-            .HasMany(p => p.Categorias)
-            .WithMany(c => c.Productos);
+             .HasMany(p => p.Categorias)
+             .WithMany(c => c.Productos);
 
         // Configurar relación entre Producto y Vendedor (Uno a Muchos)
         modelBuilder.Entity<Producto>()
-            .HasOne(p => p.Vendedor)
-            .WithMany(v => v.Productos)
-            .HasForeignKey(p => p.VendedorID);
+           .HasOne(p => p.Vendedor)
+           .WithMany(u => u.Productos)
+           .HasForeignKey(p => p.VendedorID);
+
+
     }
 
 
@@ -113,11 +115,5 @@ public class AplicacionBdContexto : DbContext, IAplicacionBdContexto
         return await base.Database.ExecuteSqlRawAsync(comandoSql, parametros, cancelacionToken);
     }
 
-    protected override void OnModelCreating(ModelBuilder constructor)
-    {
-        constructor.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-
-        base.OnModelCreating(constructor);
-    }
 
 }

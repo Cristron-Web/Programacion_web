@@ -12,7 +12,6 @@ public interface IAplicacionBdContexto
     public DbSet<SesionUsuario> SesionesUsuario { get; set; }
     public DbSet<Producto> Productos { get; set; }
     public DbSet<Categoria> Categorias { get; set; }
-    public DbSet<Vendedor> Vendedores { get; set; }
 
     Task<int> SaveChangesAsync(CancellationToken cancelacionToken);
     int SaveChanges();
@@ -32,7 +31,6 @@ public class AplicacionBdContexto : DbContext, IAplicacionBdContexto
     public DbSet<SesionUsuario> SesionesUsuario { get; set; }
     public DbSet<Producto> Productos { get; set; }
     public DbSet<Categoria> Categorias { get; set; }
-    public DbSet<Vendedor> Vendedores { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -66,4 +64,4 @@ public class AplicacionBdContexto : DbContext, IAplicacionBdContexto
     public async Task EmpezarTransaccionAsync() => await Database.BeginTransactionAsync();
     public async Task MandarTransaccionAsync() => await Database.CommitTransactionAsync();
     public void CancelarTransaccion() => Database.RollbackTransaction();
-}S
+}

@@ -1,3 +1,5 @@
+using Api.Comun.Modelos;
+using Api.Comun.Modelos.Productos;
 using Api.Comun.Modelos.Usuarios;
 using Api.Entidades;
 
@@ -21,96 +23,45 @@ public static class MapeoDtos
 
     //Mapeo de Productos
 
-    public static ProductoDto ConvertirADto(this Producto producto)
+    public static ModificarProductoDto ConvertirADto(this Producto producto)
     {
-        return new ProductoDto
+        return new ModificarProductoDto
         {
-            ProductoID = producto.ProductoID,
             Nombre = producto.Nombre,
             Descripcion = producto.Descripcion,
             Precio = producto.Precio,
-            Stock = producto.Stock,
-            CategoriaID = producto.CategoriaID,
-            VendedorID = producto.VendedorID
+            CategoriasSlugs = new List<string>() // Puedes llenarla según tu lógica
         };
     }
 
-    public static Producto ConvertirAEntidad(this ProductoCrearDto dto)
+
+    public static BuscarProductoDto ConvertirABuscarDto(this Producto producto)
+    {
+        return new BuscarProductoDto
+        {
+            Slug = producto.Slug,
+            Nombre = producto.Nombre,
+            Descripcion = producto.Descripcion,
+            Precio = producto.Precio,
+            FechaPublicacion = producto.FechaPublicacion,
+            VendedorNombre = producto.Vendedor?.Nombre, // Asegúrate de que la navegación esté bien configurada
+            Categorias = producto.Categorias?.Select(c => c.Nombre).ToList() ?? new List<string>()
+        };
+    }
+
+
+    public static Producto ConvertirADominio(this CrearProductoDto dto)
     {
         return new Producto
         {
             Nombre = dto.Nombre,
             Descripcion = dto.Descripcion,
             Precio = dto.Precio,
-            Stock = dto.Stock,
-            CategoriaID = dto.CategoriaID,
-            VendedorID = dto.VendedorID
+            VendedorID = dto.VendedorID,
+
+            // Las categorías deben ser asignadas por separado según los IDs o slugs
+            // Categorias = ... (debes resolver esto en la lógica de aplicación)
         };
     }
-
-    public static void ActualizarDesdeDto(this Producto producto, ProductoEditarDto dto)
-    {
-        producto.Nombre = dto.Nombre;
-        producto.Descripcion = dto.Descripcion;
-        producto.Precio = dto.Precio;
-        producto.Stock = dto.Stock;
-        producto.CategoriaID = dto.CategoriaID;
-        producto.VendedorID = dto.VendedorID;
-    }
-
-
-    //Mapeo de Categorias 
-
-    public static CategoriaDto ConvertirADto(this Categoria categoria)
-    {
-        return new CategoriaDto
-        {
-            Id = categoria.Id,
-            Nombre = categoria.Nombre,
-            Descripcion = categoria.Descripcion,
-            FechaCreacion = categoria.FechaCreacion
-        };
-    }
-
-    public static Categoria ConvertirAEntidad(this CrearCategoriaDto dto)
-    {
-        return new Categoria
-        {
-            Nombre = dto.Nombre,
-            Descripcion = dto.Descripcion,
-            FechaCreacion = DateTime.UtcNow // Establecer la fecha de creación
-        };
-    }
-
-    public static void ActualizarDesdeDto(this Categoria categoria, EditarCategoriaDto dto)
-    {
-        categoria.Nombre = dto.Nombre;
-        categoria.Descripcion = dto.Descripcion;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
 
 }

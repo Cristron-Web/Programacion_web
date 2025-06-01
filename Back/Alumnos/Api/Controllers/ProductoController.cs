@@ -1,74 +1,111 @@
+using Api.Comun.Extensiones;
+using Api.Comun.Interfaces;
+using Api.Comun.Modelos;
+using Api.Comun.Modelos.Productos;
+using Api.Entidades;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Api.Entidades;
-using Api.Comun.Interfaces;
-using Api.Comun.Utilidades;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-[ApiController]
-[Route("api/productos")]
-public class ProductoController : ControllerBase
+namespace Api.Controllers
 {
-    private readonly IProductoService _productoService;
-
-    public ProductoController(IProductoService productoService)
+    [Route("productos")]
+    public class ProductosController : ControllerBase
     {
-        _productoService = productoService;
-    }
+        private readonly IAplicacionBdContexto _contexto;
 
-    // Obtener todos los productos
-    [HttpGet]
-    public async Task<ActionResult<List<ProductoDto>>> ObtenerProductos()
-    {
-        var productos = await _productoService.ObtenerTodos();
-        return Ok(productos.Select(p => p.ConvertirADto()).ToList());
-    }
+        public ProductosController(IAplicacionBdContexto contexto)
+        {
+            _contexto = contexto;
+        }
 
-    // Obtener un producto por ID
-    [HttpGet("{id}")]
-    public async Task<ActionResult<ProductoDto>> ObtenerProductoPorId(int id)
-    {
-        var producto = await _productoService.ObtenerPorId(id);
-        if (producto == null)
-            return NotFound();
+        // GET /productos?nombre=camisa
+        [HttpGet]
+        public async Task<List<BuscarProductoDto>> ObtenerProductos(string? nombre)
+        {
+            var query = _contexto.Productos
+                .Include(p => p.Vendedor)
+                .Include(p => p.Categorias)
+                .AsQueryable();
 
-        return Ok(producto.ConvertirADto());
-    }
+            if (!string.IsNullOrWhiteSpace(nombre))
+            {
+                query = query.Where(p => p.Nombre.Contains(nombre) || p.Descripcion.Contains(nombre));
+            }
 
-    // Crear un nuevo producto
-    [HttpPost]
-    public async Task<ActionResult> CrearProducto([FromBody] ProductoCrearDto dto)
-    {
-        var producto = dto.ConvertirAEntidad();
-        await _productoService.Agregar(producto);
-        return CreatedAtAction(nameof(ObtenerProductoPorId), new { id = producto.ProductoID }, producto.ConvertirADto());
-    }
+            var lista = await query.ToListAsync();
+            return lista.ConvertAll(p => p.ConvertirDto());
+        }
 
-    // Editar un producto existente
-    [HttpPut("{id}")]
-    public async Task<ActionResult> EditarProducto(int id, [FromBody] ProductoEditarDto dto)
-    {
-        var productoExistente = await _productoService.ObtenerPorId(id);
-        if (productoExistente == null)
-            return NotFound();
+        // GET /productos/{slug}
+        [HttpGet("{slug}")]
+        public async Task<ActionResult<BuscarProductoDto>> ObtenerProductoPorSlug(string slug, CancellationToken cancelToken)
+        {
+            var producto = await _contexto.Productos
+                .Include(p => p.Vendedor)
+                .Include(p => p.Categorias)
+                .FirstOrDefaultAsync(p => p.Slug == slug, cancelToken);
 
-        productoExistente.ActualizarDesdeDto(dto);
-        await _productoService.Actualizar(productoExistente);
+            if (producto == null)
+                return NotFound();
 
-        return NoContent();
-    }
+            return producto.ConvertirDto();
+        }
 
-    // Eliminar un producto
-    [HttpDelete("{id}")]
-    public async Task<ActionResult> EliminarProducto(int id)
-    {
-        var productoExistente = await _productoService.ObtenerPorId(id);
-        if (productoExistente == null)
-            return NotFound();
+        // POST /productos
+        [HttpPost]
+        public async Task<ActionResult<string>> CrearProducto([FromBody] CrearProductoDto dto, CancellationToken cancelToken)
+        {
+            var vendedor = await _contexto.Usuarios.FirstOrDefaultAsync(x => x.Slug == dto.VendedorSlug, cancelToken);
+            if (vendedor == null)
+                return BadRequest("Vendedor no encontrado.");
 
-        await _productoService.Eliminar(id);
-        return NoContent();
+            var categorias = await _contexto.Categorias
+                .Where(c => dto.CategoriasSlugs.Contains(c.Slug))
+                .ToListAsync(cancelToken);
+
+            var nuevo = new Producto
+            {
+                Nombre = dto.Nombre,
+                Descripcion = dto.Descripcion,
+                Precio = dto.Precio,
+                FechaPublicacion = DateTime.UtcNow,
+                Vendedor = vendedor,
+                Categorias = categorias
+            };
+
+            await _contexto.Productos.AddAsync(nuevo, cancelToken);
+            await _contexto.SaveChangesAsync(cancelToken);
+
+            return nuevo.Slug;
+        }
+
+        // PUT /productos/{slug}
+        [HttpPut("{slug}")]
+        public async Task<ActionResult<BuscarProductoDto>> ModificarProducto(string slug, [FromBody] ModificarProductoDto dto, CancellationToken cancelToken)
+        {
+            var producto = await _contexto.Productos
+                .Include(p => p.Categorias)
+                .Include(p => p.Vendedor)
+                .FirstOrDefaultAsync(p => p.Slug == slug, cancelToken);
+
+            if (producto == null)
+                return NotFound();
+
+            producto.Nombre = dto.Nombre;
+            producto.Descripcion = dto.Descripcion;
+            producto.Precio = dto.Precio;
+
+            if (dto.CategoriasSlugs != null)
+            {
+                var categorias = await _contexto.Categorias
+                    .Where(c => dto.CategoriasSlugs.Contains(c.Slug))
+                    .ToListAsync(cancelToken);
+
+                producto.Categorias = categorias;
+            }
+
+            await _contexto.SaveChangesAsync(cancelToken);
+            return producto.ConvertirDto();
+        }
     }
 }

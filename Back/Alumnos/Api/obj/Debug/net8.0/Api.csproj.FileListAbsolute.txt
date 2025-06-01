@@ -158,3 +158,14 @@ C:\Users\Cristian\Desktop\Alumnos\Api\obj\Debug\net8.0\scopedcss\bundle\Api.styl
 C:\Users\Cristian\Desktop\Alumnos\Api\obj\Debug\net8.0\Api.csproj.Up2Date
 C:\Users\Cristian\Desktop\Alumnos\Api\obj\Debug\net8.0\Api.genruntimeconfig.cache
 C:\Users\Cristian\Desktop\Alumnos\Api\obj\Debug\net8.0\ref\Api.dll
+C:\Users\Cristian\proyecto-pw\Back\Alumnos\Api\obj\Debug\net8.0\Api.csproj.AssemblyReference.cache
+C:\Users\Cristian\proyecto-pw\Back\Alumnos\Api\obj\Debug\net8.0\Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cristian\proyecto-pw\Back\Alumnos\Api\obj\Debug\net8.0\Api.AssemblyInfoInputs.cache
+C:\Users\Cristian\proyecto-pw\Back\Alumnos\Api\obj\Debug\net8.0\Api.AssemblyInfo.cs
+C:\Users\Cristian\proyecto-pw\Back\Alumnos\Api\obj\Debug\net8.0\Api.csproj.CoreCompileInputs.cache
+C:\Users\Cristian\proyecto-pw\Back\Alumnos\Api\obj\Debug\net8.0\Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Cristian\proyecto-pw\Back\Alumnos\Api\obj\Debug\net8.0\Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Cristian\proyecto-pw\Back\Alumnos\Api\obj\Debug\net8.0\Api.sourcelink.json
+C:\Users\Cristian\proyecto-pw\Back\Alumnos\Api\obj\Debug\net8.0\Api.dll
+C:\Users\Cristian\proyecto-pw\Back\Alumnos\Api\obj\Debug\net8.0\refint\Api.dll
+C:\Users\Cristian\proyecto-pw\Back\Alumnos\Api\obj\Debug\net8.0\Api.pdb

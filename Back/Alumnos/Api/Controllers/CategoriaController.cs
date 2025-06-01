@@ -11,7 +11,8 @@ using System.Threading.Tasks;
 [Route("api/categorias")]
 public class CategoriaController : ControllerBase
 {
-    private readonly ICategoriaService _categoriaService;
+    private readonly IAplicacionBdContexto _contexto;
+    private readonly IHasherServicio _hasherServicio;
 
     public CategoriaController(ICategoriaService categoriaService)
     {

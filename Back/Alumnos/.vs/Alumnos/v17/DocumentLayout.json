@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Cristian\\Desktop\\Alumnos\\",
+  "WorkspaceRootPath": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|c:\\users\\cristian\\desktop\\alumnos\\api\\entidades\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|solutionrelative:api\\entidades\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|c:\\users\\cristian\\proyecto-pw\\back\\alumnos\\api\\comun\\interfaces\\iaplicacionbdcontexto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|solutionrelative:api\\comun\\interfaces\\iaplicacionbdcontexto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|c:\\users\\cristian\\desktop\\alumnos\\api\\persistencia\\configuraciones\\mensajesconfiguracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|solutionrelative:api\\persistencia\\configuraciones\\mensajesconfiguracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|c:\\users\\cristian\\proyecto-pw\\back\\alumnos\\api\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|solutionrelative:api\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|c:\\users\\cristian\\proyecto-pw\\back\\alumnos\\api\\controllers\\iniciosesioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|solutionrelative:api\\controllers\\iniciosesioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Producto.cs",
-              "DocumentMoniker": "C:\\Users\\Cristian\\Desktop\\Alumnos\\Api\\Entidades\\Producto.cs",
-              "RelativeDocumentMoniker": "Api\\Entidades\\Producto.cs",
-              "ToolTip": "C:\\Users\\Cristian\\Desktop\\Alumnos\\Api\\Entidades\\Producto.cs",
-              "RelativeToolTip": "Api\\Entidades\\Producto.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAAAA0AAAAHAAAA",
+              "Title": "IAplicacionBdContexto.cs",
+              "DocumentMoniker": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Comun\\Interfaces\\IAplicacionBdContexto.cs",
+              "RelativeDocumentMoniker": "Api\\Comun\\Interfaces\\IAplicacionBdContexto.cs",
+              "ToolTip": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Comun\\Interfaces\\IAplicacionBdContexto.cs",
+              "RelativeToolTip": "Api\\Comun\\Interfaces\\IAplicacionBdContexto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T14:56:55.968Z",
+              "WhenOpened": "2025-06-01T20:05:19.915Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MensajesConfiguracion.cs",
-              "DocumentMoniker": "C:\\Users\\Cristian\\Desktop\\Alumnos\\Api\\Persistencia\\Configuraciones\\MensajesConfiguracion.cs",
-              "RelativeDocumentMoniker": "Api\\Persistencia\\Configuraciones\\MensajesConfiguracion.cs",
-              "ToolTip": "C:\\Users\\Cristian\\Desktop\\Alumnos\\Api\\Persistencia\\Configuraciones\\MensajesConfiguracion.cs",
-              "RelativeToolTip": "Api\\Persistencia\\Configuraciones\\MensajesConfiguracion.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Title": "ProductoController.cs",
+              "DocumentMoniker": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Controllers\\ProductoController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\ProductoController.cs",
+              "ToolTip": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Controllers\\ProductoController.cs",
+              "RelativeToolTip": "Api\\Controllers\\ProductoController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T14:49:19.752Z",
+              "WhenOpened": "2025-06-01T19:13:07.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InicioSesionController.cs",
+              "DocumentMoniker": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Controllers\\InicioSesionController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\InicioSesionController.cs",
+              "ToolTip": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Controllers\\InicioSesionController.cs",
+              "RelativeToolTip": "Api\\Controllers\\InicioSesionController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T18:05:26.875Z",
               "EditorCaption": ""
             }
           ]

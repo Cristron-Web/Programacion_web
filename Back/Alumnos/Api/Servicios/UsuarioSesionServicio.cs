@@ -32,7 +32,7 @@ public class UsuarioSesionServicio : IUsuariosSesionServicio
         {
             EsPersistente = inicioSesion.MantenerSesion,
             FechaInicio = DateTime.UtcNow,
-            UsuarioId = usuario.UsuarioId,
+            UsuarioId = usuario.Id,
             UltimoUso = DateTime.UtcNow,
             Valido = true
         };

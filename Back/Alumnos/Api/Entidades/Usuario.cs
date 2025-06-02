@@ -4,7 +4,7 @@ namespace Api.Entidades;
 
 public class Usuario : ISlug
 {
-    public int UsuarioId { get; set; }
+    public int Id { get; set; }
     public string Nombre { get; set; }
     public string ApellidoPaterno { get; set; }
     public string ApellidoMaterno { get; set; }
@@ -12,10 +12,8 @@ public class Usuario : ISlug
     public string Contraseña { get; set; }
     public bool Habilitado { get; set; }
     public string Slug { get; set; }
-
-    public virtual List<SesionUsuario> Sesiones { get; set; }
     
-    public virtual List<Producto> Productos { get; set; }
+    public virtual List<SesionUsuario> Sesiones  { get; set; }
 
     public string ObtenerDescripcionParaSlug()
     {

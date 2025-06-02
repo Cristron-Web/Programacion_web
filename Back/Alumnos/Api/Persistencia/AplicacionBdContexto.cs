@@ -15,6 +15,10 @@ public class AplicacionBdContexto : DbContext, IAplicacionBdContexto
     }
     public DbSet<Usuario> Usuarios { get; set; }
     public DbSet<SesionUsuario> SesionesUsuario { get; set; }
+    public DbSet<Categoria> Categoria { get; set; }
+    public DbSet<Mensajes> Mensajes { get; set; }
+    public DbSet<Producto> Producto { get; set; }
+
 
     public override async Task<int> SaveChangesAsync(CancellationToken cancelacionToken = default)
     {

@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Api.Controllers;
 
 //[Authorize]
+[ApiController]
 [Route("usuarios")]
 public class UsuariosController: ControllerBase
 {

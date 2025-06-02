@@ -7,7 +7,7 @@ public class MensajesConfiguracion
 {
     public void Configure(EntityTypeBuilder<Mensajes> constructor)
     {
-        constructor.HasKey(u => u.MensajeID);
+        constructor.HasKey(u => u.MensajeId);
     }
 
 }

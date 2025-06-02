@@ -1,19 +1,15 @@
 ﻿using Api.Comun.Interfaces;
+using System.ComponentModel.DataAnnotations;
 
 namespace Api.Entidades
-{
-    public class Mensajes
     {
-        public int MensajeID { get; set; }
-        public int RemitenteID { get; set; }
-        public int ReceptorID { get; set; }
-        public string Contenido { get; set; }
-        public DateTime FechaEnvio { get; set; }
-        public bool Leido { get; set; } = false;
+        public class Mensajes
+        {
 
-        // Relaciones
-        public Usuario Remitente { get; set; }
-        public Usuario Receptor { get; set; }
-
+            [Key]
+            public int MensajeId { get; set; } // Esta será la clave primaria por convención
+            public string Texto { get; set; }
+            public DateTime Fecha { get; set; }
+        }
     }
-}
+

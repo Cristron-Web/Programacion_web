@@ -1,54 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|c:\\users\\cristian\\proyecto-pw\\back\\alumnos\\api\\persistencia\\aplicacionbdcontexto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|solutionrelative:api\\persistencia\\aplicacionbdcontexto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|c:\\users\\cristian\\proyecto-pw\\back\\alumnos\\api\\persistencia\\configuraciones\\mensajesconfiguracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|solutionrelative:api\\persistencia\\configuraciones\\mensajesconfiguracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MensajesConfiguracion.cs",
-              "DocumentMoniker": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Persistencia\\Configuraciones\\MensajesConfiguracion.cs",
-              "RelativeDocumentMoniker": "Api\\Persistencia\\Configuraciones\\MensajesConfiguracion.cs",
-              "ToolTip": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Persistencia\\Configuraciones\\MensajesConfiguracion.cs",
-              "RelativeToolTip": "Api\\Persistencia\\Configuraciones\\MensajesConfiguracion.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T04:10:02.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AplicacionBdContexto.cs",
-              "DocumentMoniker": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Persistencia\\AplicacionBdContexto.cs",
-              "RelativeDocumentMoniker": "Api\\Persistencia\\AplicacionBdContexto.cs",
-              "ToolTip": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Persistencia\\AplicacionBdContexto.cs",
-              "RelativeToolTip": "Api\\Persistencia\\AplicacionBdContexto.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAAAAcAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T03:55:36.804Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

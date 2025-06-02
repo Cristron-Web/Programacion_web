@@ -16,7 +16,7 @@ const AppNavbar = () => {
     <Navbar bg="light" expand="lg" className="shadow-sm">
       <Container>
         <Navbar.Brand as={Link} to="/" className="fw-bold" style={{ color: '#45B5C4' }}>
-          Bazar del Venado
+          Bazar del Venado 🦌
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse>

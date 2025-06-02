@@ -1,59 +1,103 @@
 import React, { useState } from 'react';
-import { Container, Form, Button, Card } from 'react-bootstrap';
+import { Container, Form, Button, Card, Alert } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 const Login = () => {
+  const navigate = useNavigate();
+  const { login } = useAuth();
+  const [error, setError] = useState('');
   const [formData, setFormData] = useState({
     email: '',
-    password: '',
+    password: ''
   });
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Login data:', formData);
-    // Aquí puedes hacer el fetch/post al backend
+    setError('');
+
+    // Validaciones básicas
+    if (!formData.email.trim() || !formData.password) {
+      setError('Todos los campos son requeridos');
+      return;
+    }
+
+    // Simulación de verificación de credenciales
+    const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers') || '[]');
+    const user = registeredUsers.find(u => 
+      u.email === formData.email && u.password === formData.password
+    );
+
+    if (user) {
+      login(user);
+      navigate('/');
+    } else {
+      setError('Credenciales incorrectas');
+    }
   };
 
   return (
-    <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
-      <Card className="p-4 shadow rounded-4" style={{ width: '100%', maxWidth: '400px' }}>
-        <h3 className="text-center mb-4 fw-bold">Iniciar sesión</h3>
-        <Form onSubmit={handleSubmit}>
-          <Form.Group controlId="formEmail" className="mb-3">
-            <Form.Label>Correo o Usuario</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Ingresa tu correo o usuario"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </Form.Group>
+    <Container className="py-5">
+      <div className="d-flex justify-content-center">
+        <Card className="p-4 shadow-sm" style={{ maxWidth: '400px', width: '100%' }}>
+          <h2 className="text-center mb-4">Iniciar sesión</h2>
+          
+          {error && <Alert variant="danger">{error}</Alert>}
+          
+          <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3">
+              <Form.Label>Correo electrónico</Form.Label>
+              <Form.Control
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="ejemplo@correo.com"
+              />
+            </Form.Group>
 
-          <Form.Group controlId="formPassword" className="mb-4">
-            <Form.Label>Contraseña</Form.Label>
-            <Form.Control
-              type="password"
-              placeholder="Ingresa tu contraseña"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-            />
-          </Form.Group>
+            <Form.Group className="mb-4">
+              <Form.Label>Contraseña</Form.Label>
+              <Form.Control
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                placeholder="Tu contraseña"
+              />
+            </Form.Group>
 
-          <Button variant="primary" type="submit" className="w-100">
-            Entrar
-          </Button>
-        </Form>
-      </Card>
+            <Button 
+              type="submit" 
+              className="w-100"
+              style={{
+                backgroundColor: '#45B5C4',
+                border: 'none'
+              }}
+            >
+              Iniciar sesión
+            </Button>
+
+            <div className="text-center mt-3">
+              <span className="text-muted">¿No tienes cuenta? </span>
+              <Button 
+                variant="link" 
+                onClick={() => navigate('/register')}
+                className="p-0 ms-1"
+              >
+                Regístrate
+              </Button>
+            </div>
+          </Form>
+        </Card>
+      </div>
     </Container>
   );
 };

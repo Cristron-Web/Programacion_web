@@ -1,85 +1,141 @@
 import React, { useState } from 'react';
-import { Container, Form, Button, Card } from 'react-bootstrap';
+import { Container, Form, Button, Card, Alert } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 const Register = () => {
+  const navigate = useNavigate();
+  const { register } = useAuth();
+  const [error, setError] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: '',
-    confirmPassword: '',
+    confirmPassword: ''
   });
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Registro:', formData);
-    // Aquí luego se conecta con el backend
+    setError('');
+
+    // Validaciones
+    if (!formData.name.trim()) {
+      setError('El nombre es requerido');
+      return;
+    }
+    if (!formData.email.trim()) {
+      setError('El correo es requerido');
+      return;
+    }
+    if (!formData.password) {
+      setError('La contraseña es requerida');
+      return;
+    }
+    if (formData.password !== formData.confirmPassword) {
+      setError('Las contraseñas no coinciden');
+      return;
+    }
+    if (formData.password.length < 6) {
+      setError('La contraseña debe tener al menos 6 caracteres');
+      return;
+    }
+
+    try {
+      register({
+        name: formData.name,
+        email: formData.email,
+        password: formData.password
+      });
+      navigate('/');
+    } catch (error) {
+      setError('Error al registrar usuario');
+    }
   };
 
   return (
-    <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
-      <Card className="p-4 shadow rounded-4" style={{ width: '100%', maxWidth: '400px' }}>
-        <h3 className="text-center mb-4 fw-bold">Crear cuenta</h3>
-        <Form onSubmit={handleSubmit}>
-          <Form.Group controlId="formName" className="mb-3">
-            <Form.Label>Nombre completo</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Tu nombre"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </Form.Group>
+    <Container className="py-5">
+      <div className="d-flex justify-content-center">
+        <Card className="p-4 shadow-sm" style={{ maxWidth: '400px', width: '100%' }}>
+          <h2 className="text-center mb-4">Registro</h2>
+          
+          {error && <Alert variant="danger">{error}</Alert>}
+          
+          <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3">
+              <Form.Label>Nombre completo</Form.Label>
+              <Form.Control
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Ingresa tu nombre"
+              />
+            </Form.Group>
 
-          <Form.Group controlId="formEmail" className="mb-3">
-            <Form.Label>Correo institucional</Form.Label>
-            <Form.Control
-              type="email"
-              placeholder="correo@universidad.cl"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label>Correo electrónico</Form.Label>
+              <Form.Control
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="ejemplo@correo.com"
+              />
+            </Form.Group>
 
-          <Form.Group controlId="formPassword" className="mb-3">
-            <Form.Label>Contraseña</Form.Label>
-            <Form.Control
-              type="password"
-              placeholder="Crea una contraseña"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-            />
-          </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label>Contraseña</Form.Label>
+              <Form.Control
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                placeholder="Mínimo 6 caracteres"
+              />
+            </Form.Group>
 
-          <Form.Group controlId="formConfirmPassword" className="mb-4">
-            <Form.Label>Confirmar contraseña</Form.Label>
-            <Form.Control
-              type="password"
-              placeholder="Repite la contraseña"
-              name="confirmPassword"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              required
-            />
-          </Form.Group>
+            <Form.Group className="mb-4">
+              <Form.Label>Confirmar contraseña</Form.Label>
+              <Form.Control
+                type="password"
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                placeholder="Repite tu contraseña"
+              />
+            </Form.Group>
 
-          <Button variant="primary" type="submit" className="w-100">
-            Registrarse
-          </Button>
-        </Form>
-      </Card>
+            <Button 
+              type="submit" 
+              className="w-100"
+              style={{
+                backgroundColor: '#45B5C4',
+                border: 'none'
+              }}
+            >
+              Registrarse
+            </Button>
+
+            <div className="text-center mt-3">
+              <span className="text-muted">¿Ya tienes cuenta? </span>
+              <Button 
+                variant="link" 
+                onClick={() => navigate('/login')}
+                className="p-0 ms-1"
+              >
+                Inicia sesión
+              </Button>
+            </div>
+          </Form>
+        </Card>
+      </div>
     </Container>
   );
 };

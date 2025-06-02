@@ -1,0 +1,42 @@
+/* Estilos globales */
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+  min-height: 100vh;
+}
+
+/* Efecto hover para las tarjetas */
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover .overlay {
+  opacity: 1 !important;
+}
+
+/* Estilos para los botones */
+.btn-outline-primary {
+  border-width: 2px;
+}
+
+.btn-outline-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(33, 147, 176, 0.3);
+}
+
+/* Animación para el gradiente del título */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1.display-4 {
+  background-size: 200% auto;
+  animation: gradient 5s ease infinite;
+} 

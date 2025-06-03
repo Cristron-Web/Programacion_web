@@ -43,12 +43,18 @@ public class ProductosController : ControllerBase
     [HttpPost]
     public async Task<int> CrearProducto([FromBody] CrearProductoDto productoDto, CancellationToken cancelacionToken)
     {
+        var categoria = _contexto.Categoria.FirstOrDefault(x => x.Slug == productoDto.CategoriaSlug);
+        var usuarios = _contexto.Usuarios.FirstOrDefault(x => x.Slug == productoDto.UsuarioSlug);
         var nuevoProducto = new Producto()
         {
+            ProductoID = productoDto.ProductoID,
             Nombre = productoDto.Nombre,
             Descripcion = productoDto.Descripcion,
+            CategoriaID = categoria.CategoriaID,
+            UsuarioId = usuario.Id,
             Precio = productoDto.Precio,
-            Disponible = productoDto.Disponible
+            Disponible = productoDto.Disponible,
+            FechaPublicacion = productoDto.FechaPublicacion
         };
 
         await _contexto.Producto.AddAsync(nuevoProducto, cancelacionToken);

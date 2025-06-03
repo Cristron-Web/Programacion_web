@@ -1,12 +1,137 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|c:\\users\\cristian\\proyecto-pw\\back\\alumnos\\api\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|solutionrelative:api\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|c:\\users\\cristian\\proyecto-pw\\back\\alumnos\\api\\comun\\modelos\\productos\\crearproductodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|solutionrelative:api\\comun\\modelos\\productos\\crearproductodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|c:\\users\\cristian\\proyecto-pw\\back\\alumnos\\api\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|solutionrelative:api\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|c:\\users\\cristian\\proyecto-pw\\back\\alumnos\\api\\entidades\\sesionusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|solutionrelative:api\\entidades\\sesionusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|c:\\users\\cristian\\proyecto-pw\\back\\alumnos\\api\\entidades\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|solutionrelative:api\\entidades\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|c:\\users\\cristian\\proyecto-pw\\back\\alumnos\\api\\entidades\\mensajes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|solutionrelative:api\\entidades\\mensajes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|c:\\users\\cristian\\proyecto-pw\\back\\alumnos\\api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{54EF631B-3EF1-4A74-85F7-3A59E5503CF8}|Api\\Api.csproj|solutionrelative:api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Entidades\\Usuario.cs",
+              "RelativeDocumentMoniker": "Api\\Entidades\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Entidades\\Usuario.cs",
+              "RelativeToolTip": "Api\\Entidades\\Usuario.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAA0AAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T14:52:23.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductoController.cs",
+              "DocumentMoniker": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Controllers\\ProductoController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\ProductoController.cs",
+              "ToolTip": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Controllers\\ProductoController.cs",
+              "RelativeToolTip": "Api\\Controllers\\ProductoController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:28:46.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CrearProductoDto.cs",
+              "DocumentMoniker": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Comun\\Modelos\\Productos\\CrearProductoDto.cs",
+              "RelativeDocumentMoniker": "Api\\Comun\\Modelos\\Productos\\CrearProductoDto.cs",
+              "ToolTip": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Comun\\Modelos\\Productos\\CrearProductoDto.cs",
+              "RelativeToolTip": "Api\\Comun\\Modelos\\Productos\\CrearProductoDto.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAA4wAkAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:27:46.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SesionUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Entidades\\SesionUsuario.cs",
+              "RelativeDocumentMoniker": "Api\\Entidades\\SesionUsuario.cs",
+              "ToolTip": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Entidades\\SesionUsuario.cs",
+              "RelativeToolTip": "Api\\Entidades\\SesionUsuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T15:46:44.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Entidades\\Producto.cs",
+              "RelativeDocumentMoniker": "Api\\Entidades\\Producto.cs",
+              "ToolTip": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Entidades\\Producto.cs",
+              "RelativeToolTip": "Api\\Entidades\\Producto.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAArwAcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T15:46:42.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Mensajes.cs",
+              "DocumentMoniker": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Entidades\\Mensajes.cs",
+              "RelativeDocumentMoniker": "Api\\Entidades\\Mensajes.cs",
+              "ToolTip": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\Entidades\\Mensajes.cs",
+              "RelativeToolTip": "Api\\Entidades\\Mensajes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T15:46:40.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Api\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Cristian\\proyecto-pw\\Back\\Alumnos\\Api\\appsettings.Development.json",
+              "RelativeToolTip": "Api\\appsettings.Development.json",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAgAAACJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-02T15:38:41.42Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
